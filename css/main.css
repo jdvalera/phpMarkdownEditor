@@ -1,0 +1,25 @@
+body {
+	padding-top: 50px;
+}
+
+#pdfButton {
+	margin-right: 10px;
+}
+
+#texteditor {
+	height: 80vh;
+}
+
+#textview {
+	height: 80vh;
+}
+
+textarea.form-control {
+	height:100%;
+}
+
+/*@media (max-width: 750px) {
+	#textview {
+		display: none;
+	}
+}*/
