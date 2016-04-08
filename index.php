@@ -51,8 +51,8 @@
 
     </div>
 
-    
-    <form action="pdftest.php" method="post" id="hiddenform">
+
+    <form action="pdfconverter.php" method="post" id="hiddenform">
           <textarea style="display:none;" id="hiddentext" name="text"></textarea>
     </form>
 

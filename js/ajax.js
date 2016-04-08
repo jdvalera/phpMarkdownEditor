@@ -17,11 +17,12 @@ $('body').on('keyup','#text',function(){
       });
  });
 
-$('body').on('click','#pdf',function(){
-
+$('body').on('click','#pdfButton',function(){
       var keyed = $('#textview').html();
-      $('#hiddentext').html(keyed);
-      $('#hiddenform').submit();
+      if(keyed) {
+            $('#hiddentext').html(keyed);
+            $('#hiddenform').submit();
+      }
       // $.ajax({
       //       url: 'pdftest.php',
       //       type: 'post',
