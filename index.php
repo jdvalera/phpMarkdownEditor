@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>QuickMarkdown</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">MyMarkdownNotes</a>
+          <a class="navbar-brand" href="#">QuickMarkdown</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -41,7 +41,7 @@
     </nav>
 
     <div class="container">
-      <h1 class="text-center">Hello, world!</h1>
+      <h1 class="text-center">QuickMarkdown</h1>
 
       <div class="row">
           <div class="col-md-6" id="texteditor"><textarea id='text' class="form-control"></textarea></div>
@@ -50,6 +50,11 @@
           </div>
 
     </div>
+
+    
+    <form action="pdftest.php" method="post" id="hiddenform">
+          <textarea style="display:none;" id="hiddentext" name="text"></textarea>
+    </form>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
