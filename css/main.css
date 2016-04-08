@@ -23,3 +23,17 @@ textarea.form-control {
 		display: none;
 	}
 }*/
+
+#textview p {
+    word-wrap: break-word;
+}
+
+
+#textview {
+    overflow: auto;
+}
+
+
+#cont1 {
+    overflow: hidden;
+}
