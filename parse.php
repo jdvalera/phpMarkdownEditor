@@ -9,9 +9,12 @@ function parseText($text) {
     return $Parsedown->text($text);
 }
 
+if (!empty($_POST) && $_POST['function'] === 'parse') {
+
 $text = $_POST['text'];
 
 echo parseText($text);
+}
 
 
 ?>

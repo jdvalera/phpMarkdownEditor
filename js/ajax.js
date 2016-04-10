@@ -3,7 +3,7 @@ var convertText = function(text) {
       $.ajax({
       	url: 'parse.php',
       	type: 'post',
-      	data: {'text': text},
+      	data: {'function': "parse",'text': text},
       	success: function(data) {
       	$("#textview").html(data);
       	},
