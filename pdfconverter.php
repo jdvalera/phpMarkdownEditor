@@ -4,8 +4,8 @@ require_once 'dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 
-if (!empty($_POST) && $_POST['function'] === "textToPDF") {
-$text = $_POST['text'];
+if (!empty($_POST['pdf'])) {
+$text = $_POST['pdf'];
     // instantiate and use the dompdf class
     $dompdf = new Dompdf();
     $dompdf->loadHtml($text);

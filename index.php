@@ -73,9 +73,11 @@ if (!empty($_POST['pdf']) ) {
           </div>
 
     </div>
+    
 
 
-    <form action="index.php" method="post" id="hiddenform">
+
+    <form action="index.php" method="post" id="hiddenform" target="_blank">
           <textarea style="display:none;" id="hiddentext" name="pdf"></textarea>
     </form>
 
