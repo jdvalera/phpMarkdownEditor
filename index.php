@@ -1,3 +1,26 @@
+<?php
+// reference the Dompdf namespace
+require_once 'dompdf/autoload.inc.php';
+
+use Dompdf\Dompdf;
+
+if (!empty($_POST['pdf']) ) {
+    $text = $_POST['pdf'];
+    // instantiate and use the dompdf class
+    $dompdf = new Dompdf();
+    $dompdf->loadHtml($text);
+    
+    // (Optional) Setup the paper size and orientation
+    //$dompdf->setPaper('A4', 'landscape');
+    
+    // Render the HTML as PDF
+    $dompdf->render();
+    
+    // Output the generated PDF to Browser
+    $dompdf->stream('file.pdf', array('Attachment'=>0));
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,8 +75,8 @@
     </div>
 
 
-    <form action="pdfconverter.php" method="post" id="hiddenform">
-          <textarea style="display:none;" id="hiddentext" name="text"></textarea>
+    <form action="index.php" method="post" id="hiddenform">
+          <textarea style="display:none;" id="hiddentext" name="pdf"></textarea>
     </form>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -23,30 +23,37 @@ $('body').on('keyup focus keydown','#text',function(){
  });
  
 
-$('body').on('click','#pdfButton',function(){
+$('body').on('click','#pdfButton',function(event){
       var keyed = $('#textview').html();
       if(keyed) {
             $('#hiddentext').html(keyed);
             $('#hiddenform').submit();
       }
+      // event.preventDefault();
+      
       // $.ajax({
-      //       url: 'pdftest.php',
+      //       url: 'index.php',
       //       type: 'post',
-      //       data: {'text': "hey"},
+      //       data: {'function': "pdf", 'text': "heyfsd"},
       //       success: function() {
-      //       console.log(keyed);
-      //       $("#pdf").html("success");
+      //             console.log("sent");
+      //             $("#textview").html("success");
+      //             // var keyed = $('#textview').html();
+      //             // if(keyed) {
+      //             //       $('#hiddentext').html(keyed);
+      //             //       $('#hiddenform').submit();
+      //             // }
       //       },
       //       error: function(xhr, desc, err) {
       //             console.log(xhr);
       //             console.log(err);
       //       }
-      //});
+      // });
 });
 
 $.get('startText.txt', function(text){
       $('#text').html(text);
-
+      var text = $("#text").html();
       convertText(text);
       
 })
