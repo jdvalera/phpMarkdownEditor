@@ -2,14 +2,16 @@
 require 'vendor/autoload.php';
 
 
-$Parsedown = new Parsedown();
-$Parsedown->setMarkupEscaped(true);
-$Parsedown->setBreaksEnabled(true);
-
+function parseText($text) {
+    $Parsedown = new Parsedown();
+    $Parsedown->setMarkupEscaped(true);
+    $Parsedown->setBreaksEnabled(true);
+    return $Parsedown->text($text);
+}
 
 $text = $_POST['text'];
-$parsed = $Parsedown->text($text);
-echo $parsed;
+
+echo parseText($text);
 
 
 ?>
