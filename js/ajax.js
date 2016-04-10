@@ -1,12 +1,9 @@
-$('body').on('keyup','#text',function(){
-      //var keyed = $(this).val().replace(/\n/g, '<br/>');
-      var keyed = $(this).val();
-      //var keyed = "<?php echo $parsed; ?>";
 
+var convertText = function(text) {
       $.ajax({
       	url: 'parse.php',
       	type: 'post',
-      	data: {'text': keyed},
+      	data: {'text': text},
       	success: function(data) {
       	$("#textview").html(data);
       	},
@@ -15,7 +12,16 @@ $('body').on('keyup','#text',function(){
       		console.log(err);
       	}
       });
+}
+
+$('body').on('keyup focus keydown','#text',function(){
+      //var keyed = $(this).val().replace(/\n/g, '<br/>');
+      var keyed = $(this).val();
+      //var keyed = "<?php echo $parsed; ?>";
+
+      convertText(keyed);
  });
+ 
 
 $('body').on('click','#pdfButton',function(){
       var keyed = $('#textview').html();
@@ -37,3 +43,10 @@ $('body').on('click','#pdfButton',function(){
       //       }
       //});
 });
+
+$.get('startText.txt', function(text){
+      $('#text').html(text);
+
+      convertText(text);
+      
+})
